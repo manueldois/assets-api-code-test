@@ -4,6 +4,7 @@
   "scripts": {
     "init-schema": "ts-node initSchema.ts",
     "start": "ts-node index.ts",
+    "test": "npm run test:integration",
     "test:unit": "vitest run --config vitest.unit.config.ts",
     "test:integration": "vitest run --config vitest.integration.config.ts",
     "dev": "ts-node-dev --transpile-only --respawn index.ts",
