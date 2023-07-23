@@ -1,12 +1,10 @@
 'use strict'
 import express from 'express'
 import cors from 'cors'
-import { getDbClient } from './getDbClient'
+import { client } from './getDbClient'
 
 const PORT = 3001
 const HOST = '0.0.0.0'
-
-const client = getDbClient()
 
 const app = express()
 app.use(cors())

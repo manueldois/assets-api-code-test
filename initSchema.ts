@@ -1,6 +1,4 @@
-import { getDbClient } from './getDbClient'
-
-const client = getDbClient()
+import { client } from "./getDbClient";
 
 async function createSchema() {
   try {
