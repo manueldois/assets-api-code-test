@@ -6,7 +6,15 @@ async function createSchema() {
 
     // Define your schema creation queries here
     const schemaQueries = [
-      'CREATE TABLE IF NOT EXISTS migrations (id SERIAL PRIMARY KEY, name VARCHAR(50))'
+      `CREATE TABLE IF NOT EXISTS assets (
+        id SERIAL PRIMARY KEY, 
+        name VARCHAR(100),
+        data BYTEA, 
+        size INTEGER,
+        encoding VARCHAR(100),
+        mimetype VARCHAR(100),
+        createdAt TIMESTAMPTZ
+      )`
     ];
 
     for (const query of schemaQueries) {
