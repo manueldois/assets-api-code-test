@@ -15,7 +15,11 @@ app.get('/', (req, res) => {
   res.json({ info: 'App is running!' })
 })
 
-app.listen(PORT, HOST, () => {
-  console.log(`Running on http://${HOST}:${PORT}`)
-  console.log(`Connected to database "${client.database}"`)
-})
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, HOST, () => {
+    console.log(`Running on http://${HOST}:${PORT}`)
+    console.log(`Connected to database "${client.database}"`)
+  })
+}
+
+export default app
